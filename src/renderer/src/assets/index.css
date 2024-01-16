@@ -11,8 +11,7 @@
   body {
     @apply h-full;
     @apply select-none;
-    background-color: #202020;
-    /* @apply bg-transparent; */
+    @apply bg-[#202020];
     @apply font-mono antialiased text-white;
     @apply overflow-hidden;
   }
@@ -23,5 +22,17 @@
 
   button {
     -webkit-app-region: no-drag;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#555] rounded-md;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
   }
 }
