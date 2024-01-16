@@ -11,6 +11,13 @@ function createWindow(): void {
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
+    center: true,
+    title: 'Notes',
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#2f3241',
+      symbolColor: '#fff'
+    },
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
