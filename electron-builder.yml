@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: notes
+productName: Notes
 directories:
   buildResources: build
 files:
@@ -12,7 +12,10 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: notes
+  executableName: Notes
+  icon: 'resources/icon-bg.png'
+  # target: 'nsis'
+  # target: 'portable'
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

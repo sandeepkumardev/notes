@@ -14,13 +14,15 @@ function createWindow(): void {
     height: 670,
     show: false,
     autoHideMenuBar: true,
-    ...(process.platform === 'linux' ? { icon } : {}),
+    // ...(process.platform === 'linux' ? { icon } : {}),
+    icon: icon,
     center: true,
     title: 'Notes',
     titleBarStyle: 'hidden',
     titleBarOverlay: {
       color: '#2f3241',
-      symbolColor: '#fff'
+      symbolColor: '#fff',
+      height: 32
     },
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
