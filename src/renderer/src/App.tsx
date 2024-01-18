@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import {
   ActionButtonRow,
   Content,
-  DraggableTopBar,
   FloatingNoteTitle,
   MarkdownEditor,
   NotePreviewList,
@@ -18,19 +17,16 @@ const App = () => {
   }
 
   return (
-    <>
-      <DraggableTopBar />
-      <RootLayout>
-        <Sidebar className="p-1">
-          <ActionButtonRow className="flex justify-between mt-1" />
-          <NotePreviewList className="mt-3 space-y-1" onSelect={resetScroll} />
-        </Sidebar>
-        <Content ref={contentContainerRef} className="border-l bg-zinc-800/50 border-l-white/20">
-          <FloatingNoteTitle className="pt-2" />
-          <MarkdownEditor />
-        </Content>
-      </RootLayout>
-    </>
+    <RootLayout>
+      <Sidebar className="p-1">
+        <ActionButtonRow className="flex justify-between h-[32px]" />
+        <NotePreviewList className="h-[calc(100vh-40px)] overflow-auto" onSelect={resetScroll} />
+      </Sidebar>
+      <Content ref={contentContainerRef} className="border-l bg-zinc-800/50 border-l-white/20">
+        <FloatingNoteTitle />
+        <MarkdownEditor />
+      </Content>
+    </RootLayout>
   )
 }
 
