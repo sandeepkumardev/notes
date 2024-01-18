@@ -97,7 +97,7 @@ export const createNote: CreateNote = async () => {
 
   // console.info(`Creating note: ${filePath}`)
 
-  await writeFile(filePath, '')
+  await writeFile(filePath, '## ')
 
   return fileName
 }
