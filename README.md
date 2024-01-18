@@ -1,34 +1,56 @@
-# notes
+## Welcome to Notes App 👋🏻
 
-An Electron application with React and TypeScript
+Notes is a simple **note-taking app** that uses **Markdown** syntax to format your notes.
 
-## Recommended IDE Setup
+![image](./resources/ui.png)
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+You can create your first note by clicking on the top-left icon on the sidebar, or delete one by clicking on top right icon.
 
-## Project Setup
+Following there's a quick overview of the currently supported Markdown syntax.
 
-### Install
+## Text formatting
 
-```bash
-$ yarn
-```
+This is a **bold** text.
+This is an _italic_ text.
 
-### Development
+## Headings
 
-```bash
-$ yarn dev
-```
+Here are all the heading formats currently supported by **_NoteMark_**:
 
-### Build
+# Heading 1
 
-```bash
-# For windows
-$ yarn build:win
+## Heading 2
 
-# For macOS
-$ yarn build:mac
+### Heading 3
 
-# For Linux
-$ yarn build:linux
-```
+#### Heading 4
+
+### Bulleted list
+
+For example, you can add a list of bullet points:
+
+- Bullet point 1
+- Bullet point 2
+- Bullet point 3
+
+### Numbered list
+
+Here we have a numbered list:
+
+1. Numbered list item 1
+2. Numbered list item 2
+3. Numbered list item 3
+
+### Blockquote
+
+> This is a blockquote. You can use it to emphasize some text or to cite someone.
+
+### Code blocks
+
+Only `inline code` is currently supported!
+
+Code block snippets using the following syntax _\`\`\`js\`\`\`_ are **_not supported_** yet!
+
+### Links
+
+Links are **_not supported_** yet!
