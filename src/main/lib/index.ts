@@ -25,8 +25,6 @@ export const getNotes: GetNotes = async () => {
   const notes = notesFileNames.filter((filename) => filename.endsWith('.md'))
 
   if (isEmpty(notes)) {
-    // console.info('No notes found!')
-
     const content = await readFile(welcomeNoteFile, { encoding: fileEncoding })
 
     const filePath = path.join(rootDir, welcomeNoteFileName)
