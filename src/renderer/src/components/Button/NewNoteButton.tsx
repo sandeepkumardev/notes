@@ -1,10 +1,9 @@
 import { ActionButton, ActionButtonProps } from '@/components'
-import { createEmptyNoteAtom } from '@renderer/store'
-import { useSetAtom } from 'jotai'
+import { useStore } from '@renderer/store'
 import { LuFileSignature } from 'react-icons/lu'
 
 export const NewNoteButton = ({ ...props }: ActionButtonProps) => {
-  const createEmptyNote = useSetAtom(createEmptyNoteAtom)
+  const { createEmptyNote } = useStore()
 
   const handleCreation = async () => {
     await createEmptyNote()

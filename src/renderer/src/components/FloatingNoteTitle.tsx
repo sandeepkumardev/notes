@@ -1,10 +1,9 @@
-import { selectedNoteAtom } from '@renderer/store'
-import { useAtomValue } from 'jotai'
+import { useStore } from '@renderer/store'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export const FloatingNoteTitle = ({ className, ...props }: ComponentProps<'div'>) => {
-  const selectedNote = useAtomValue(selectedNoteAtom)
+  const { selectedNote } = useStore()
 
   return (
     <div className="sticky top-0 bg-[#202020] draggable pr-[135px]">
